@@ -8,14 +8,12 @@ on:
 jobs:
   generate:
     name: generate
-    # runs-on: macOS-latest
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: macOS-latest
-        swift: "5.4"
+    runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: fwal/setup-swift@v1
+        with:
+          swift-version: "5.4.2"
       - run: swift --version
       - run: make gen
       - run: swift build

@@ -1,0 +1,20 @@
+name: Generate
+
+on:
+  schedule:
+    - cron:  '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    name: generate
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make generate
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Generate on latest macOS
+          branch: "main"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

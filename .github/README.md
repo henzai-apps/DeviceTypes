@@ -1,5 +1,7 @@
 # DeviceTypes
 
+[![Generate](https://github.com/noppefoxwolf/DeviceTypes/actions/workflows/generate.yml/badge.svg?branch=main&event=schedule)](https://github.com/noppefoxwolf/DeviceTypes/actions/workflows/generate.yml)
+
 `noppefoxwolf/DeviceTypes` is provide enum device names.
 
 These device names are generated everyday using github actions.

@@ -11,6 +11,9 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: YOCKOW/Action-setup-swift@v1
+        with:
+          swift-version: '5.4'
       - run: make gen
       - run: swift build
       - uses: stefanzweifel/git-auto-commit-action@v4

@@ -15,7 +15,7 @@ https://github.com/actions/virtual-environments
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/noppefoxwolf/DeviceTypes", from: "0.0.1")
+        .package(url: "https://github.com/noppefoxwolf/DeviceTypes", branch: "main")
     ]
 )
 ```

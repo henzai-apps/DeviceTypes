@@ -8,7 +8,12 @@ on:
 jobs:
   generate:
     name: generate
-    runs-on: macOS-latest
+    # runs-on: macOS-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: macos-latest
+        swift: "5.4"
     steps:
       - uses: actions/checkout@v2
       - run: swift --version

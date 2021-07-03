@@ -46,13 +46,13 @@ struct DeviceTypesCodeGenerator {
         
         import SwiftUI
         
-        extension PreviewDevice {
+        public extension PreviewDevice {
             init(_ deviceType: DeviceType) {
                 self.init(rawValue: deviceType.rawValue)
             }
         }
         
-        extension View {
+        public extension View {
             func previewDevice(_ deviceType: DeviceType) -> some View {
                 previewDevice(PreviewDevice(deviceType))
             }
